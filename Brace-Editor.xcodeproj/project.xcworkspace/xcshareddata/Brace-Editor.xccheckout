@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>389DEC31-CDAA-48C8-9084-2EB8A1908067</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
+		<key>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</key>
+		<string>https://github.com/craiggrummitt/Swift-Alerts-popovers-and-modals.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../Xcode%20Projects/Brace-Editor/Alamofire</string>
+		<key>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</key>
+		<string>Swift-Alerts-popovers-and-modals/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/craiggrummitt/Swift-Alerts-popovers-and-modals.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swift-Alerts-popovers-and-modals</string>
+		</dict>
+	</array>
+</dict>
+</plist>
