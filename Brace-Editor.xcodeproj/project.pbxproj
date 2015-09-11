@@ -21,6 +21,13 @@
 		0503E2741A806EB600AE382A /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2731A806EB600AE382A /* CellViewController.swift */; };
 		86335BB51BA1715900A45520 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86335BB41BA1715900A45520 /* PopViewController.swift */; };
 		8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCA91BA281DC00651292 /* libxml2.dylib */; };
+		8695DCC31BA33BD700651292 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCBC1BA33BD700651292 /* CYRLayoutManager.m */; };
+		8695DCC41BA33BD700651292 /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCBE1BA33BD700651292 /* CYRTextStorage.m */; };
+		8695DCC51BA33BD700651292 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCC01BA33BD700651292 /* CYRTextView.m */; };
+		8695DCC61BA33BD700651292 /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCC21BA33BD700651292 /* CYRToken.m */; };
+		8695DCC81BA33C9500651292 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCC71BA33C9500651292 /* CoreText.framework */; };
+		8695DCCA1BA33CA100651292 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCC91BA33CA100651292 /* CoreGraphics.framework */; };
+		8695DCCD1BA33E6200651292 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCCC1BA33E6200651292 /* QEDTextView.m */; };
 		FE61AAB93A91FD154175ECC3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F3BFCDDDA5AA5416627FAD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -67,6 +74,19 @@
 		44F3BFCDDDA5AA5416627FAD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86335BB41BA1715900A45520 /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 		8695DCA91BA281DC00651292 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		8695DCBA1BA33BD600651292 /* Brace-Editor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brace-Editor-Bridging-Header.h"; sourceTree = "<group>"; };
+		8695DCBB1BA33BD700651292 /* CYRLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRLayoutManager.h; sourceTree = "<group>"; };
+		8695DCBC1BA33BD700651292 /* CYRLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRLayoutManager.m; sourceTree = "<group>"; };
+		8695DCBD1BA33BD700651292 /* CYRTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextStorage.h; sourceTree = "<group>"; };
+		8695DCBE1BA33BD700651292 /* CYRTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextStorage.m; sourceTree = "<group>"; };
+		8695DCBF1BA33BD700651292 /* CYRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextView.h; sourceTree = "<group>"; };
+		8695DCC01BA33BD700651292 /* CYRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextView.m; sourceTree = "<group>"; };
+		8695DCC11BA33BD700651292 /* CYRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRToken.h; sourceTree = "<group>"; };
+		8695DCC21BA33BD700651292 /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRToken.m; sourceTree = "<group>"; };
+		8695DCC71BA33C9500651292 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8695DCC91BA33CA100651292 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8695DCCB1BA33E6200651292 /* QEDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QEDTextView.h; sourceTree = "<group>"; };
+		8695DCCC1BA33E6200651292 /* QEDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QEDTextView.m; sourceTree = "<group>"; };
 		E1F9E41A8FE19A60FD6C3402 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8695DCCA1BA33CA100651292 /* CoreGraphics.framework in Frameworks */,
+				8695DCC81BA33C9500651292 /* CoreText.framework in Frameworks */,
 				8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */,
 				FE61AAB93A91FD154175ECC3 /* Pods.framework in Frameworks */,
 			);
@@ -118,6 +140,7 @@
 				0503E2401A8067C800AE382A /* Main.storyboard */,
 				0503E2761A8074BE00AE382A /* Compiler */,
 				0503E2751A8074B100AE382A /* Views */,
+				8695DCB91BA33BB100651292 /* SyntaxHighlighting */,
 				0503E2431A8067C800AE382A /* Images.xcassets */,
 				0503E2451A8067C800AE382A /* LaunchScreen.xib */,
 				0503E2391A8067C800AE382A /* Brace_Editor.xcdatamodeld */,
@@ -172,9 +195,29 @@
 			name = Compiler;
 			sourceTree = "<group>";
 		};
+		8695DCB91BA33BB100651292 /* SyntaxHighlighting */ = {
+			isa = PBXGroup;
+			children = (
+				8695DCBB1BA33BD700651292 /* CYRLayoutManager.h */,
+				8695DCBC1BA33BD700651292 /* CYRLayoutManager.m */,
+				8695DCCB1BA33E6200651292 /* QEDTextView.h */,
+				8695DCCC1BA33E6200651292 /* QEDTextView.m */,
+				8695DCBD1BA33BD700651292 /* CYRTextStorage.h */,
+				8695DCBE1BA33BD700651292 /* CYRTextStorage.m */,
+				8695DCBF1BA33BD700651292 /* CYRTextView.h */,
+				8695DCC01BA33BD700651292 /* CYRTextView.m */,
+				8695DCC11BA33BD700651292 /* CYRToken.h */,
+				8695DCC21BA33BD700651292 /* CYRToken.m */,
+				8695DCBA1BA33BD600651292 /* Brace-Editor-Bridging-Header.h */,
+			);
+			name = SyntaxHighlighting;
+			sourceTree = "<group>";
+		};
 		AD880DABA7743BA30B20CCD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8695DCC91BA33CA100651292 /* CoreGraphics.framework */,
+				8695DCC71BA33C9500651292 /* CoreText.framework */,
 				44F3BFCDDDA5AA5416627FAD /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -342,12 +385,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8695DCCD1BA33E6200651292 /* QEDTextView.m in Sources */,
 				0503D3291A81CEF700E2592C /* CompileModal.swift in Sources */,
 				86335BB51BA1715900A45520 /* PopViewController.swift in Sources */,
+				8695DCC51BA33BD700651292 /* CYRTextView.m in Sources */,
 				0503E2741A806EB600AE382A /* CellViewController.swift in Sources */,
 				0503E2701A80687000AE382A /* OnlineCompiler.swift in Sources */,
 				0503E23B1A8067C800AE382A /* Brace_Editor.xcdatamodeld in Sources */,
+				8695DCC41BA33BD700651292 /* CYRTextStorage.m in Sources */,
 				0503E2381A8067C800AE382A /* AppDelegate.swift in Sources */,
+				8695DCC31BA33BD700651292 /* CYRLayoutManager.m in Sources */,
+				8695DCC61BA33BD700651292 /* CYRToken.m in Sources */,
 				0503E2721A8068ED00AE382A /* SwiftyJSON.swift in Sources */,
 				0503E23D1A8067C800AE382A /* MasterViewController.swift in Sources */,
 				0503E23F1A8067C800AE382A /* DetailViewController.swift in Sources */,
@@ -482,6 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Brace-Editor/Brace-Editor-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,6 +549,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Brace-Editor/Brace-Editor-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
