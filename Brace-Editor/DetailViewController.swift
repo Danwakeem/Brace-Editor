@@ -22,7 +22,8 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     let notificationKey = "com.Danwakeem.compile-output"
     
-    @IBOutlet var programSorceCode: UITextView!
+    var programSorceCode: CYRTextView!
+    @IBOutlet weak var programView: UIView!
     
     var inputAccessory: UIView!
     
@@ -48,27 +49,34 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
             if let code = detail.valueForKey("code")?.description {
                 label.text = code
             }
-            title = detail.valueForKey("title")?.description
-            codeType = detail.valueForKey("language")?.description
         }
+        codeType = detail.valueForKey("language")?.description
+        title = detail.valueForKey("title")?.description
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
-        self.programSorceCode.delegate = self
+        //self.configureView()
         self.navigationController?.hidesBarsWhenKeyboardAppears = true
         self.navigationController?.hidesBarsOnSwipe = true
-        self.programSorceCode.text! += "\n"
-        self.createInputAccessoryView()
-        //self.programSorceCode.inputAccessoryView = self.inputAccessory
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "constraintsForAccessoryView", name: UIKeyboardWillShowNotification, object: nil)
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "modifyModalView", name: self.notificationKey, object: nil)
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.managedObjectContext = appDelegate.managedObjectContext!
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        programSorceCode = QEDTextView(frame: programView.frame)
+        view.addSubview(programSorceCode)
+        configureView()
+        programSorceCode.delegate = self
+        //programSorceCode.userInteractionEnabled = true
+        //programSorceCode.editable = true
+        //self.createInputAccessoryView()
+        //self.programSorceCode.inputAccessoryView = self.inputAccessory
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,10 +85,10 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     }
     
     func createInputAccessoryView(){
-        self.inputAccessory = UIView(frame: CGRectMake(0, 0, 320, 50))
-        self.inputAccessory.backgroundColor = UIColor.lightGrayColor()
-        self.inputAccessory = self.rowOfButtons(self.accessoryButtons)
-        self.programSorceCode.inputAccessoryView = self.inputAccessory
+        inputAccessory = UIView(frame: CGRectMake(0, 0, 320, 50))
+        inputAccessory.backgroundColor = UIColor.lightGrayColor()
+        inputAccessory = self.rowOfButtons(self.accessoryButtons)
+        programSorceCode.inputAccessoryView = self.inputAccessory
     }
     
     //Create the rows of buttons
