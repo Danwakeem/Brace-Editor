@@ -7,59 +7,68 @@
 //
 
 import Foundation
-import AlamoFire
+import Kanna
 
 class OnlineCompiler {
     var program: String!
     var language: String!
-    
-    let notificationKey = "com.Danwakeem.Brace-Editor"
-    
+    let specialEncoding = ["simiCol": "%3B", "plus": "%2B", "backSlash": "%5C"]
+    let notificationKey = "com.Danwakeem.compile-output"
     var outPut: String!
     var compileStatus: String!
-    
-    var defaultHeaders = Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders ?? [:]
-    let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-    
-    var params = ["async": "0", "client_secret": "ceaf93f10f7330318aecc742f76bda4fae74b12e", "input": "<required>", "lang": "C", "memory_limit": "262144", "source": "int main(){   printf(\"Hello World.\\n\");return 0; }", "time_limit": "10"] as Dictionary
-    
+    let url = NSURL(string: "http://codepad.org/")
     var manager: AnyObject!
     
     init (){
-        self.defaultHeaders["X-Mashape-Key"] = "yjU6TGrRSjmsh1v2Sipo9fS6SLvQp1iUuXXjsnWmLFshfXUaxy"
-        self.defaultHeaders["Content-Type"] = "application/x-www-form-urlencoded"
-        self.defaultHeaders["Accept"] = "application/json"
-        
-        configuration.HTTPAdditionalHeaders = self.defaultHeaders
-        self.manager = Alamofire.Manager(configuration: configuration)
         self.program = ""
         self.language = "C"
     }
     
-    func compileProgram(targetLanguage: String, sourceCode: String) {
-        self.params["lang"] = targetLanguage
-        self.params["source"] = sourceCode
-        sendToCompile()
+    func encodeSourceCode(sourceCode: String) -> String {
+        var source = sourceCode
+        for (key, val) in specialEncoding {
+            switch(key) {
+            case "simiCol":
+                source = source.stringByReplacingOccurrencesOfString(";", withString: val)
+            case "plus" :
+                source = source.stringByReplacingOccurrencesOfString("+", withString: val)
+            case "backSlash":
+                source = source.stringByReplacingOccurrencesOfString("\\", withString: val)
+            default:
+                println("Did not find encoding")
+            }
+        }
+        return source
     }
     
-    func sendToCompile(){
-        var request = Alamofire.Manager(configuration: configuration).request(.POST, "https://ideas2it-hackerearth.p.mashape.com/run/", parameters: self.params)
-        request.responseString({ (request, response, string, error) in
-            //Have to convert the string to NSData then to a JSONObject to run through SwiftyJson
-            var asData = (string! as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-            let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(asData!, options: NSJSONReadingOptions.MutableContainers, error: nil)
-            var json = JSON(jsonObject)
-            
-            if let op = json["run_status"]["output"].string {
-                self.outPut = op
+    func compileProgram(targetLanguage: String, sourceCode: String) {
+        language = targetLanguage
+        let source = encodeSourceCode(sourceCode)
+        
+        var session = NSURLSession.sharedSession()
+        var request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        var body = "lang=\(language)&code=\(source)&run=True&submit=Submit"
+        request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            var url = response as! NSHTTPURLResponse
+            println(url.URL!)
+            let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if let doc: HTMLDocument = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding){
+                let result = doc.xpath("/html/body/div/table/tr/td/div[2]/table/tr/td[2]/div")
+                if result.text != nil {
+                    self.outPut = result.text
+                    NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: result.text as? AnyObject)
+                } else {
+                    self.outPut = "Network connection problem. Try again."
+                    NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: "Sorry")
+                }
+                
             }
-            if let status = json["compile_status"].string {
-                self.compileStatus = status
-            }
-            
-            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: self)
-            
         })
+        
+        task.resume()
     }
     
 }

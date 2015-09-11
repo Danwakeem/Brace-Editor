@@ -16,11 +16,12 @@
 		0503E2441A8067C800AE382A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0503E2431A8067C800AE382A /* Images.xcassets */; };
 		0503E2471A8067C800AE382A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0503E2451A8067C800AE382A /* LaunchScreen.xib */; };
 		0503E2531A8067C800AE382A /* Brace_EditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2521A8067C800AE382A /* Brace_EditorTests.swift */; };
-		0503E26E1A80685900AE382A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0503E2641A80683A00AE382A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0503E2701A80687000AE382A /* OnlineCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E26F1A80687000AE382A /* OnlineCompiler.swift */; };
 		0503E2721A8068ED00AE382A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2711A8068ED00AE382A /* SwiftyJSON.swift */; };
 		0503E2741A806EB600AE382A /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2731A806EB600AE382A /* CellViewController.swift */; };
-		05A1815C1A80BB1E0064747D /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1815B1A80BB1E0064747D /* PopViewController.swift */; };
+		86335BB51BA1715900A45520 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86335BB41BA1715900A45520 /* PopViewController.swift */; };
+		8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCA91BA281DC00651292 /* libxml2.dylib */; };
+		FE61AAB93A91FD154175ECC3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F3BFCDDDA5AA5416627FAD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,41 +32,6 @@
 			remoteGlobalIDString = 0503E2311A8067C800AE382A;
 			remoteInfo = "Brace-Editor";
 		};
-		0503E2631A80683A00AE382A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		0503E2651A80683A00AE382A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		0503E2671A80683A00AE382A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		0503E2691A80683A00AE382A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		0503E26B1A80684A00AE382A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0503E26E1A80685900AE382A /* Alamofire.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +60,14 @@
 		0503E24C1A8067C800AE382A /* Brace-EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brace-EditorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0503E2511A8067C800AE382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0503E2521A8067C800AE382A /* Brace_EditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brace_EditorTests.swift; sourceTree = "<group>"; };
-		0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		0503E26F1A80687000AE382A /* OnlineCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlineCompiler.swift; path = ../OnlineCompiler.swift; sourceTree = "<group>"; };
 		0503E2711A8068ED00AE382A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0503E2731A806EB600AE382A /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
-		05A1815B1A80BB1E0064747D /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopViewController.swift; path = "../../../Documents/Swift-Alerts-popovers-and-modals/Popping/PopViewController.swift"; sourceTree = "<group>"; };
+		0820E8EBB6BA075CFA3A85BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		44F3BFCDDDA5AA5416627FAD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86335BB41BA1715900A45520 /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		8695DCA91BA281DC00651292 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		E1F9E41A8FE19A60FD6C3402 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */,
+				FE61AAB93A91FD154175ECC3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,10 +93,12 @@
 		0503E2291A8067C800AE382A = {
 			isa = PBXGroup;
 			children = (
+				8695DCA91BA281DC00651292 /* libxml2.dylib */,
 				0503E2341A8067C800AE382A /* Brace-Editor */,
 				0503E24F1A8067C800AE382A /* Brace-EditorTests */,
 				0503E2331A8067C800AE382A /* Products */,
-				0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */,
+				DDBEDC28107B67D78A40A1AA /* Pods */,
+				AD880DABA7743BA30B20CCD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,25 +151,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0503E25D1A80683A00AE382A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0503E2641A80683A00AE382A /* Alamofire.framework */,
-				0503E2661A80683A00AE382A /* Alamofire.framework */,
-				0503E2681A80683A00AE382A /* Alamofire iOS Tests.xctest */,
-				0503E26A1A80683A00AE382A /* Alamofire OSX Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0503E2751A8074B100AE382A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0503E23C1A8067C800AE382A /* MasterViewController.swift */,
 				0503E23E1A8067C800AE382A /* DetailViewController.swift */,
 				0503E2731A806EB600AE382A /* CellViewController.swift */,
-				05A1815B1A80BB1E0064747D /* PopViewController.swift */,
 				0503D3281A81CEF700E2592C /* CompileModal.swift */,
+				86335BB41BA1715900A45520 /* PopViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -211,6 +172,23 @@
 			name = Compiler;
 			sourceTree = "<group>";
 		};
+		AD880DABA7743BA30B20CCD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44F3BFCDDDA5AA5416627FAD /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDBEDC28107B67D78A40A1AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1F9E41A8FE19A60FD6C3402 /* Pods.debug.xcconfig */,
+				0820E8EBB6BA075CFA3A85BF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,15 +196,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0503E2561A8067C800AE382A /* Build configuration list for PBXNativeTarget "Brace-Editor" */;
 			buildPhases = (
+				EF68B684B899E9A9714A5B23 /* Check Pods Manifest.lock */,
 				0503E22E1A8067C800AE382A /* Sources */,
 				0503E22F1A8067C800AE382A /* Frameworks */,
 				0503E2301A8067C800AE382A /* Resources */,
 				0503E26D1A80685000AE382A /* CopyFiles */,
+				E36C961ED286141D3194DB00 /* Embed Pods Frameworks */,
+				780D368144FD07833D19AB0B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0503E26C1A80684A00AE382A /* PBXTargetDependency */,
 			);
 			name = "Brace-Editor";
 			productName = "Brace-Editor";
@@ -281,12 +261,6 @@
 			mainGroup = 0503E2291A8067C800AE382A;
 			productRefGroup = 0503E2331A8067C800AE382A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0503E25D1A80683A00AE382A /* Products */;
-					ProjectRef = 0503E25C1A80683A00AE382A /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0503E2311A8067C800AE382A /* Brace-Editor */,
@@ -294,37 +268,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0503E2641A80683A00AE382A /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 0503E2631A80683A00AE382A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0503E2661A80683A00AE382A /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 0503E2651A80683A00AE382A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0503E2681A80683A00AE382A /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 0503E2671A80683A00AE382A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0503E26A1A80683A00AE382A /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 0503E2691A80683A00AE382A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0503E2301A8067C800AE382A /* Resources */ = {
@@ -346,13 +289,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		780D368144FD07833D19AB0B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E36C961ED286141D3194DB00 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF68B684B899E9A9714A5B23 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0503E22E1A8067C800AE382A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05A1815C1A80BB1E0064747D /* PopViewController.swift in Sources */,
 				0503D3291A81CEF700E2592C /* CompileModal.swift in Sources */,
+				86335BB51BA1715900A45520 /* PopViewController.swift in Sources */,
 				0503E2741A806EB600AE382A /* CellViewController.swift in Sources */,
 				0503E2701A80687000AE382A /* OnlineCompiler.swift in Sources */,
 				0503E23B1A8067C800AE382A /* Brace_Editor.xcdatamodeld in Sources */,
@@ -378,11 +369,6 @@
 			isa = PBXTargetDependency;
 			target = 0503E2311A8067C800AE382A /* Brace-Editor */;
 			targetProxy = 0503E24D1A8067C800AE382A /* PBXContainerItemProxy */;
-		};
-		0503E26C1A80684A00AE382A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 0503E26B1A80684A00AE382A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,6 +471,7 @@
 		};
 		0503E2571A8067C800AE382A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F9E41A8FE19A60FD6C3402 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -502,6 +489,7 @@
 		};
 		0503E2581A8067C800AE382A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0820E8EBB6BA075CFA3A85BF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -6,43 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>389DEC31-CDAA-48C8-9084-2EB8A1908067</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Brace-Editor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>https://github.com/Alamofire/Alamofire.git</string>
-		<key>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</key>
-		<string>https://github.com/craiggrummitt/Swift-Alerts-popovers-and-modals.git</string>
+		<key>1A81FA7B8549C59FD2A9A8667C96AD5AC43E2B59</key>
+		<string>https://github.com/Danwakeem/Brace-Editor.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Brace-Editor.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../Xcode%20Projects/Brace-Editor/Alamofire</string>
-		<key>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</key>
-		<string>Swift-Alerts-popovers-and-modals/</string>
+		<key>1A81FA7B8549C59FD2A9A8667C96AD5AC43E2B59</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/craiggrummitt/Swift-Alerts-popovers-and-modals.git</string>
+	<string>https://github.com/Danwakeem/Brace-Editor.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</string>
+	<string>1A81FA7B8549C59FD2A9A8667C96AD5AC43E2B59</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<string>1A81FA7B8549C59FD2A9A8667C96AD5AC43E2B59</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E5E65DF0C469BBF759E743D81EA789F96B8ABCD2</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Swift-Alerts-popovers-and-modals</string>
+			<string>Brace-Editor</string>
 		</dict>
 	</array>
 </dict>

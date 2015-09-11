@@ -1,3 +1,4 @@
+
 //
 //  DetailViewController.swift
 //  Brace-Editor
@@ -19,7 +20,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     var accessoryButtons = ["{", "}", "(", ")", "+", "-", "=", "*", ";", "tab"]
     
-    let notificationKey = "com.Danwakeem.Brace-Editor"
+    let notificationKey = "com.Danwakeem.compile-output"
     
     @IBOutlet var programSorceCode: UITextView!
     
@@ -41,14 +42,14 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     func configureView() {
         // Update the user interface for the detail item.
         var asArray = self.detailItem! as Array
-        self.index = asArray[1] as NSIndexPath
+        index = asArray[1] as! NSIndexPath
         var detail: AnyObject = asArray[0] as AnyObject
         if let label = self.programSorceCode {
             if let code = detail.valueForKey("code")?.description {
                 label.text = code
             }
-            self.title = detail.valueForKey("title")?.description
-            self.codeType = detail.valueForKey("language")?.description
+            title = detail.valueForKey("title")?.description
+            codeType = detail.valueForKey("language")?.description
         }
     }
 
@@ -66,7 +67,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "modifyModalView", name: self.notificationKey, object: nil)
         
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.managedObjectContext = appDelegate.managedObjectContext!
     }
 
@@ -91,7 +92,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         keyboardRowView.backgroundColor = UIColor(red:0.82, green:0.835, blue:0.859, alpha:1)
         //Create each button in the row
         for buttonTitle in buttonTitles{
-            let button = createButtonWithTitle(buttonTitle)
+            let button = createButtonWithTitle(buttonTitle as String)
             buttons.append(button)
             keyboardRowView.addSubview(button)
         }
@@ -103,7 +104,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     //Creating a button with the title from the button* arrays
     func createButtonWithTitle(title: String) -> UIButton {
         
-        let button = UIButton.buttonWithType(.System) as UIButton
+        let button = UIButton.buttonWithType(.System) as! UIButton
         button.frame = CGRectMake(0, 0, 20, 20)
         button.clipsToBounds = true
         button.setTitle(title, forState: .Normal)
@@ -147,7 +148,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     //AccessoryView actions
     func buttonTapped(sender: AnyObject?) {
-        let button = sender as UIButton
+        let button = sender as! UIButton
         if let title = button.titleForState(.Normal) {
             switch title {
                 case "tab":
@@ -166,13 +167,10 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     }
     
     func modifyModalView(){
-        if let status = self.compiler.outPut {
-            self.compileModal?.sucesfulCompile.text = "Successful Compile!"
+        dispatch_async(dispatch_get_main_queue(), {
+            self.compileModal?.sucesfulCompile.text = "Compile Complete"
             self.compileModal?.outputTextView.text = self.compiler.outPut
-        } else {
-            self.compileModal?.sucesfulCompile.text = "Compile Error!"
-            self.compileModal?.outputTextView.text = self.compiler.compileStatus
-        }
+        })
     }
     
     func closePop(sender: AnyObject) {
@@ -181,7 +179,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     func modal() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        self.compileModal = (sb.instantiateViewControllerWithIdentifier("CompileModal")! as CompileModal)
+        self.compileModal = (sb.instantiateViewControllerWithIdentifier("CompileModal")! as! CompileModal)
         self.compileModal!.delegate = self
         
         self.compileModal!.modalTransitionStyle = .CoverVertical
@@ -196,7 +194,8 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     //Save users program to core data
     func textViewDidEndEditing(textView: UITextView) {
-        let object = self.fetchedResultsController.objectAtIndexPath(self.index) as NSManagedObject
+        let object = self.fetchedResultsController.objectAtIndexPath(self.index)
+            as! NSManagedObject
         object.setValue(self.programSorceCode.text, forKey: "code")
         self.managedObjectContext?.save(nil)
     }

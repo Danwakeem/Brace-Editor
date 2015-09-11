@@ -37,13 +37,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     func closePop(sender:AnyObject) {
+        /*
         if let title = self.popupViewController?.programTitle.text {
-            if let language = self.popupViewController?.language {
+            if let language = self.popupViewController?.selectedLanguage {
                 var arr = [title,language]
                 self.insertNewObject(arr)
                 self.dismissViewControllerAnimated(true, completion: {})
             }
         }
+        */
+        self.dismissViewControllerAnimated(true, completion: {})
     }
     
     func cancelPop(sender: AnyObject) {
@@ -52,7 +55,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func modal(sender: AnyObject) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        self.popupViewController = (sb.instantiateViewControllerWithIdentifier("popper")! as PopViewController)
+        self.popupViewController = (sb.instantiateViewControllerWithIdentifier("popper")! as! PopViewController)
         self.popupViewController!.delegate = self
         
         self.popupViewController!.modalTransitionStyle = .CoverVertical
@@ -70,16 +73,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(sender: AnyObject) {
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as NSManagedObject
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        var title: String = sender[0] as String
-        var language: String = sender[1] as String
-        newManagedObject.setValue(sender[0], forKey: "title")
-        newManagedObject.setValue(sender[1], forKey: "language")
+        let title: String = sender[0] as! String
+        let language: String = sender[1] as! String
+        newManagedObject.setValue(title, forKey: "title")
+        newManagedObject.setValue(language, forKey: "language")
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-             
+        
+        println("New program with title \(title) and language \(language)")
+        
         // Save the context.
         var error: NSError? = nil
         if !context.save(&error) {
@@ -97,8 +102,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-            (segue.destinationViewController as DetailViewController).detailItem = [object,indexPath]
+            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+            (segue.destinationViewController as! DetailViewController).detailItem = [object,indexPath]
             }
         }
     }
@@ -110,12 +115,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+        let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
         return sectionInfo.numberOfObjects
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -128,7 +133,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
-            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject)
+            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject)
                 
             var error: NSError? = nil
             if !context.save(&error) {
@@ -141,7 +146,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         cell.textLabel!.text = object.valueForKey("title")!.description
     }
 
