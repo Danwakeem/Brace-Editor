@@ -83,8 +83,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         newManagedObject.setValue(language, forKey: "language")
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
         
-        println("New program with title \(title) and language \(language)")
-        
         // Save the context.
         var error: NSError? = nil
         if !context.save(&error) {

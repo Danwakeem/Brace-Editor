@@ -44,7 +44,8 @@ class OnlineCompiler {
     func compileProgram(targetLanguage: String, sourceCode: String) {
         language = targetLanguage
         let source = encodeSourceCode(sourceCode)
-        
+        //So C++ gets encoded as well
+        language = encodeSourceCode(language)
         var session = NSURLSession.sharedSession()
         var request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
@@ -52,9 +53,6 @@ class OnlineCompiler {
         request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            var url = response as! NSHTTPURLResponse
-            println(url.URL!)
-            let str = NSString(data: data, encoding: NSUTF8StringEncoding)
             if let doc: HTMLDocument = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding){
                 let result = doc.xpath("/html/body/div/table/tr/td/div[2]/table/tr/td[2]/div")
                 if result.text != nil {
