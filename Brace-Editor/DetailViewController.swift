@@ -57,7 +57,6 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.configureView()
         self.navigationController?.hidesBarsWhenKeyboardAppears = true
         self.navigationController?.hidesBarsOnSwipe = true
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "constraintsForAccessoryView", name: UIKeyboardWillShowNotification, object: nil)
@@ -73,10 +72,8 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         view.addSubview(programSorceCode)
         configureView()
         programSorceCode.delegate = self
-        //programSorceCode.userInteractionEnabled = true
-        //programSorceCode.editable = true
-        //self.createInputAccessoryView()
-        //self.programSorceCode.inputAccessoryView = self.inputAccessory
+        self.createInputAccessoryView()
+        //programSorceCode.inputAccessoryView = inputAccessory
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,8 +84,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     func createInputAccessoryView(){
         inputAccessory = UIView(frame: CGRectMake(0, 0, 320, 50))
         inputAccessory.backgroundColor = UIColor.lightGrayColor()
-        inputAccessory = self.rowOfButtons(self.accessoryButtons)
-        programSorceCode.inputAccessoryView = self.inputAccessory
+        inputAccessory = rowOfButtons(accessoryButtons)
     }
     
     //Create the rows of buttons
@@ -156,6 +152,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     //AccessoryView actions
     func buttonTapped(sender: AnyObject?) {
+        println("AccessoryView tapped")
         let button = sender as! UIButton
         if let title = button.titleForState(.Normal) {
             switch title {
