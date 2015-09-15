@@ -18,6 +18,8 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     var index: NSIndexPath!
     var codeType: String!
     
+    @IBOutlet weak var compileButton: UIBarButtonItem!
+    
     var accessoryButtons = ["{", "}", "(", ")", "+", "-", "=", "*", ";", "tab"]
     
     let notificationKey = "com.Danwakeem.compile-output"
@@ -57,26 +59,68 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.configureView()
-        self.navigationController?.hidesBarsWhenKeyboardAppears = true
-        self.navigationController?.hidesBarsOnSwipe = true
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "constraintsForAccessoryView", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "modifyModalView", name: self.notificationKey, object: nil)
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        self.managedObjectContext = appDelegate.managedObjectContext!
+        if detailItem != nil {
+            setUpTextView()
+            //self.navigationController?.hidesBarsWhenKeyboardAppears = true
+            //self.navigationController?.hidesBarsOnSwipe = true
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "modifyModalView", name: self.notificationKey, object: nil)
+            
+            self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            self.navigationItem.leftItemsSupplementBackButton = true
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            self.managedObjectContext = appDelegate.managedObjectContext!
+        } else {
+            compileButton.enabled = false
+            self.view.backgroundColor = UIColor.grayColor()
+        }
+    }
+    
+    func setUpTextView() {
+        var arr: NSArray = getSyntax()
+        programSorceCode = QEDTextView(programView.frame, language: arr as [AnyObject])
+        view.addSubview(programSorceCode)
+        configureView()
+        programSorceCode.delegate = self
+        self.createInputAccessoryView()
+        programSorceCode.inputAccessoryView = inputAccessory
+    }
+    
+    func getSyntax() -> NSArray {
+        var textViewOptions = NSMutableArray()
+        if let path = NSBundle.mainBundle().pathForResource("syntax", ofType: "plist") {
+            var syntaxFile = NSDictionary(contentsOfFile: path)
+            if let dictionary = syntaxFile {
+                let regex = dictionary.valueForKey("RegEx") as! NSDictionary
+                let colors = dictionary.valueForKey("Colors") as! NSDictionary
+                let regForLanguage = regex.valueForKey(codeType) as! NSDictionary
+                
+                for (key, expression) in regForLanguage {
+                    let keyColors = colors.valueForKey(key as! String) as! Array<CGFloat>
+                    let r = keyColors[0] / 255
+                    let g = keyColors[1] / 255
+                    let b = keyColors[2] / 255
+                    let boldFont = UIFont.boldSystemFontOfSize(14.0)
+                    let color = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+                    let token = CYRToken(name: (key as! String), expression: (expression as! String) as String, attributes: [NSForegroundColorAttributeName: color, NSFontAttributeName: boldFont])
+                    textViewOptions.addObject(token)
+                }
+            }
+        }
+        
+        return NSArray(array: textViewOptions)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        programSorceCode = QEDTextView(frame: programView.frame)
-        view.addSubview(programSorceCode)
-        configureView()
-        programSorceCode.delegate = self
-        //programSorceCode.userInteractionEnabled = true
-        //programSorceCode.editable = true
-        //self.createInputAccessoryView()
-        //self.programSorceCode.inputAccessoryView = self.inputAccessory
+        if detailItem != nil {
+            programSorceCode.frame = programView.frame
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,8 +131,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     func createInputAccessoryView(){
         inputAccessory = UIView(frame: CGRectMake(0, 0, 320, 50))
         inputAccessory.backgroundColor = UIColor.lightGrayColor()
-        inputAccessory = self.rowOfButtons(self.accessoryButtons)
-        programSorceCode.inputAccessoryView = self.inputAccessory
+        inputAccessory = rowOfButtons(accessoryButtons)
     }
     
     //Create the rows of buttons

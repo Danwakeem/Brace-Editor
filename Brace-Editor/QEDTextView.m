@@ -19,16 +19,27 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    if (self)
+    {
+        [self commonSetup:@"Tokens"];
+    }
+    return self;
+}
+
+- (id)init:(CGRect)frame language:(NSArray*) language
+{
+    self = [super initWithFrame:frame];
     
     if (self)
     {
-        [self commonSetup];
+        [self commonSetup:@"noTokens"];
     }
+    self.tokens = language;
     
     return self;
 }
 
-- (void)commonSetup
+- (void)commonSetup:(NSString*)string
 {
     _defaultFont = [UIFont systemFontOfSize:14.0f];
     _boldFont = [UIFont boldSystemFontOfSize:14.0f];
@@ -46,8 +57,10 @@
         // This works around a bug in 7.0.3 where HelveticaNeue-Italic is not present as a UIFont option
         _italicFont = (__bridge_transfer UIFont*)CTFontCreateWithName(CFSTR("HelveticaNeue-Italic"), 14.0f, NULL);
     }
-    
-    self.tokens = [self solverTokens];
+    if([string  isEqual: @"Tokens"])
+    {
+        self.tokens = [self solverTokens];
+    }
 }
 
 
@@ -130,14 +143,25 @@
                                                 attributes:@{
                                                              NSForegroundColorAttributeName : RGB(104, 0, 111)
                                                              }],
+                               [CYRToken tokenWithName:@"types"
+                                            expression:@"\\b(void|int|float|double|char)\\b"
+                                            attributes:@{
+                                                         NSForegroundColorAttributeName : RGB(104, 0, 111),
+                                                         NSFontAttributeName : self.boldFont
+                                                         }],
+                               [CYRToken tokenWithName:@"cTypes"
+                                            expression:@"\\b(return|main|include)\\b"
+                                            attributes:@{
+                                                         NSForegroundColorAttributeName : RGB(111, 104, 0)
+                                                         }],
                                [CYRToken tokenWithName:@"reserved_words"
-                                                expression:@"(abs|acos|acosh|asin|asinh|atan|atanh|atomicweight|ceil|complex|cos|cosh|crandom|deriv|erf|erfc|exp|eye|floor|frac|gamma|gaussel|getconst|imag|inf|integ|integhq|inv|ln|log10|log2|machineprecision|max|maximize|min|minimize|molecularweight|ncum|ones|pi|plot|random|real|round|sgn|sin|sqr|sinh|sqrt|tan|tanh|transpose|trunc|var|zeros|main)"
+                                                expression:@"\\b(abs|acos|acosh|asin|asinh|atan|atanh|atomicweight|ceil|complex|cos|cosh|crandom|deriv|erf|erfc|exp|eye|floor|frac|gamma|gaussel|getconst|imag|inf|integ|integhq|inv|ln|log10|log2|machineprecision|max|maximize|min|minimize|molecularweight|ncum|ones|pi|plot|random|real|round|sgn|sin|sqr|sinh|sqrt|tan|tanh|transpose|trunc|var|zeros)\\b"
                                                 attributes:@{
                                                              NSForegroundColorAttributeName : RGB(104, 0, 111),
                                                              NSFontAttributeName : self.boldFont
                                                              }],
                                [CYRToken tokenWithName:@"chart_parameters"
-                                                expression:@"(chartheight|charttitle|chartwidth|color|seriesname|showlegend|showxmajorgrid|showxminorgrid|showymajorgrid|showyminorgrid|transparency|thickness|xautoscale|xaxisrange|xlabel|xlogscale|xrange|yautoscale|yaxisrange|ylabel|ylogscale|yrange)"
+                                                expression:@"\\b(chartheight|charttitle|chartwidth|color|seriesname|showlegend|showxmajorgrid|showxminorgrid|showymajorgrid|showyminorgrid|transparency|thickness|xautoscale|xaxisrange|xlabel|xlogscale|xrange|yautoscale|yaxisrange|ylabel|ylogscale|yrange)\\b"
                                                 attributes:@{
                                                              NSForegroundColorAttributeName : RGB(11, 81, 195),
                                                              }],

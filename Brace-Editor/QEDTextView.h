@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIFont *defaultFont;
 @property (nonatomic, strong) UIFont *boldFont;
 @property (nonatomic, strong) UIFont *italicFont;
+- (id)init:(CGRect)frame language:(NSArray*) language;
 
 @end
 
