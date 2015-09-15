@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JI3-Ke-PNm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,6 +19,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-148" y="64"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="YQa-Fp-LqK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sh1-Pc-0GQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <splitViewController id="JI3-Ke-PNm" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="rS3-R9-Ivy" kind="relationship" relationship="masterViewController" id="QBY-4t-bJL"/>
+                        <segue destination="N1z-88-sfI" kind="relationship" relationship="detailViewController" id="Wne-Hm-jMy"/>
+                    </connections>
+                </splitViewController>
+            </objects>
+            <point key="canvasLocation" x="-953" y="603"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
@@ -47,7 +60,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="title" destination="2pz-XF-uhl" id="dEb-6H-WZa"/>
-                                    <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetail" id="jUr-3t-vfg"/>
+                                    <segue destination="N1z-88-sfI" kind="showDetail" identifier="showDetail" id="Ac7-QD-k1S"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,7 +70,9 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Brace Editor" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Brace Editor" id="tQt-TN-PWz">
+                        <barButtonItem key="backBarButtonItem" title="Brace Editor" id="J6D-d5-soh"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBw-oW-TR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="754"/>
+            <point key="canvasLocation" x="1284" y="64"/>
         </scene>
         <!--Compile Modal-->
         <scene sceneID="bnS-VC-HmS">
@@ -248,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDN-8w-kh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="754"/>
+            <point key="canvasLocation" x="1284" y="814"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -263,14 +278,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-pV-1go">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="-4" y="64" width="608" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nnd-pV-1go" secondAttribute="trailing" constant="-16" id="6Yc-VQ-xbe"/>
-                            <constraint firstItem="Nnd-pV-1go" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="-16" id="MmD-yZ-WfC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nnd-pV-1go" secondAttribute="trailing" constant="-20" id="6Yc-VQ-xbe"/>
+                            <constraint firstItem="Nnd-pV-1go" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="-20" id="MmD-yZ-WfC"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="Nnd-pV-1go" secondAttribute="bottom" id="VIc-OW-PEt"/>
                             <constraint firstItem="Nnd-pV-1go" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="op0-Rp-J6m"/>
                         </constraints>
@@ -284,12 +299,32 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="compileButton" destination="61K-iG-eE6" id="1gL-w9-QNN"/>
                         <outlet property="programView" destination="Nnd-pV-1go" id="v7a-oa-bj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="64"/>
+            <point key="canvasLocation" x="605" y="814"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DCO-JB-qgy">
+            <objects>
+                <navigationController id="N1z-88-sfI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uh5-Uy-fef">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ah7-4n-0Wa" kind="relationship" relationship="rootViewController" id="pKi-d4-qLl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMJ-C6-fZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="814"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ac7-QD-k1S"/>
+    </inferredMetricsTieBreakers>
 </document>

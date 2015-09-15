@@ -12,7 +12,8 @@ import Kanna
 class OnlineCompiler {
     var program: String!
     var language: String!
-    let specialEncoding = ["simiCol": "%3B", "plus": "%2B", "backSlash": "%5C"]
+    let specialEncoding = [";": "%3B", "+": "%2B", "\\": "%5C"]
+    let otherEncoding = ["$": "%24", "?": "%3F", "<": "%3C", ">": "%3E", "@": "%40", ":": "%3A", "/": "%2F", ",": "%2C", "'": "%27", "&": "%26", "#": "%23", "!": "%21", "%": "%25", "_": "%5F", "^": "%5E", "[": "%5E", "]": "%5D"]
     let notificationKey = "com.Danwakeem.compile-output"
     var outPut: String!
     var compileStatus: String!
@@ -27,16 +28,7 @@ class OnlineCompiler {
     func encodeSourceCode(sourceCode: String) -> String {
         var source = sourceCode
         for (key, val) in specialEncoding {
-            switch(key) {
-            case "simiCol":
-                source = source.stringByReplacingOccurrencesOfString(";", withString: val)
-            case "plus" :
-                source = source.stringByReplacingOccurrencesOfString("+", withString: val)
-            case "backSlash":
-                source = source.stringByReplacingOccurrencesOfString("\\", withString: val)
-            default:
-                println("Did not find encoding")
-            }
+            source = source.stringByReplacingOccurrencesOfString(key, withString: val)
         }
         return source
     }

@@ -15,6 +15,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
     var popupViewController:PopViewController?
     var compiler = OnlineCompiler()
+    
+    var detailViewController: DetailViewController? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +26,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        self.title = "Brace Editor"
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "modal:")
         //let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "blurView:")
         self.navigationItem.rightBarButtonItem = addButton
+        
+        if let split = self.splitViewController {
+            let controllers = split.viewControllers
+            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+        }
         
     }
 
@@ -101,8 +110,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-            (segue.destinationViewController as! DetailViewController).detailItem = [object,indexPath]
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+            controller.detailItem = [object,indexPath]
             }
+        } else {
+            println("Didnt find segue")
         }
     }
 

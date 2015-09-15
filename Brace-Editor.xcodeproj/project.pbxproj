@@ -28,6 +28,7 @@
 		8695DCC81BA33C9500651292 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCC71BA33C9500651292 /* CoreText.framework */; };
 		8695DCCA1BA33CA100651292 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCC91BA33CA100651292 /* CoreGraphics.framework */; };
 		8695DCCD1BA33E6200651292 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCCC1BA33E6200651292 /* QEDTextView.m */; };
+		86D1164A1BA4662C004A53E8 /* syntax.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D116491BA4662C004A53E8 /* syntax.plist */; };
 		FE61AAB93A91FD154175ECC3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F3BFCDDDA5AA5416627FAD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		8695DCC91BA33CA100651292 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8695DCCB1BA33E6200651292 /* QEDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QEDTextView.h; sourceTree = "<group>"; };
 		8695DCCC1BA33E6200651292 /* QEDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QEDTextView.m; sourceTree = "<group>"; };
+		86D116491BA4662C004A53E8 /* syntax.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = syntax.plist; sourceTree = "<group>"; };
 		E1F9E41A8FE19A60FD6C3402 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				0503E2451A8067C800AE382A /* LaunchScreen.xib */,
 				0503E2391A8067C800AE382A /* Brace_Editor.xcdatamodeld */,
 				0503E2351A8067C800AE382A /* Supporting Files */,
+				86D116491BA4662C004A53E8 /* syntax.plist */,
 			);
 			path = "Brace-Editor";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0503E2421A8067C800AE382A /* Main.storyboard in Resources */,
+				86D1164A1BA4662C004A53E8 /* syntax.plist in Resources */,
 				0503E2471A8067C800AE382A /* LaunchScreen.xib in Resources */,
 				0503E2441A8067C800AE382A /* Images.xcassets in Resources */,
 			);
