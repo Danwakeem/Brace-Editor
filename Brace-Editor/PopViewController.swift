@@ -9,8 +9,8 @@
 import UIKit
 
 protocol PopViewControllerDelegate {
-    func closePop(AnyObject)
-    func insertNewObject(AnyObject)
+    func closePop(_: AnyObject)
+    func insertNewObject(_: [String?])
 }
 
 class PopViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
@@ -54,7 +54,7 @@ class PopViewController: UIViewController , UIPickerViewDataSource, UIPickerView
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return supportedLang[row]
     }
     
@@ -63,7 +63,7 @@ class PopViewController: UIViewController , UIPickerViewDataSource, UIPickerView
     }
     
     func insertNewObject(sender: AnyObject) {
-        var arr = [programTitle.text,selectedLanguage]
+        let arr = [programTitle.text,selectedLanguage]
         delegate?.insertNewObject(arr)
     }
     

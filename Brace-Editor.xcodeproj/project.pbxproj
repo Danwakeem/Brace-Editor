@@ -20,7 +20,7 @@
 		0503E2721A8068ED00AE382A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2711A8068ED00AE382A /* SwiftyJSON.swift */; };
 		0503E2741A806EB600AE382A /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503E2731A806EB600AE382A /* CellViewController.swift */; };
 		86335BB51BA1715900A45520 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86335BB41BA1715900A45520 /* PopViewController.swift */; };
-		8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCA91BA281DC00651292 /* libxml2.dylib */; };
+		8695DCAA1BA281DC00651292 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695DCA91BA281DC00651292 /* libxml2.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8695DCC31BA33BD700651292 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCBC1BA33BD700651292 /* CYRLayoutManager.m */; };
 		8695DCC41BA33BD700651292 /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCBE1BA33BD700651292 /* CYRTextStorage.m */; };
 		8695DCC51BA33BD700651292 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695DCC01BA33BD700651292 /* CYRTextView.m */; };
@@ -117,7 +117,6 @@
 		0503E2291A8067C800AE382A = {
 			isa = PBXGroup;
 			children = (
-				8695DCA91BA281DC00651292 /* libxml2.dylib */,
 				0503E2341A8067C800AE382A /* Brace-Editor */,
 				0503E24F1A8067C800AE382A /* Brace-EditorTests */,
 				0503E2331A8067C800AE382A /* Products */,
@@ -155,6 +154,7 @@
 		0503E2351A8067C800AE382A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8695DCA91BA281DC00651292 /* libxml2.dylib */,
 				0503E2361A8067C800AE382A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -283,7 +283,9 @@
 		0503E22A1A8067C800AE382A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Dan jarvis";
 				TargetAttributes = {
 					0503E2311A8067C800AE382A = {
@@ -464,6 +466,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -531,6 +534,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Brace-Editor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Danwakeem.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -550,6 +554,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Brace-Editor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Danwakeem.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -572,6 +577,7 @@
 				);
 				INFOPLIST_FILE = "Brace-EditorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Danwakeem.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brace-Editor.app/Brace-Editor";
 			};
@@ -587,6 +593,7 @@
 				);
 				INFOPLIST_FILE = "Brace-EditorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Danwakeem.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brace-Editor.app/Brace-Editor";
 			};

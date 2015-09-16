@@ -7,118 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AC74297690F5853131440B227B5620 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC4334FFE352A0499D743B6D6105886 /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		06BB80C489338CC337B3EADF7064EA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6727B7686E696FF460B7134AFA8D27B /* Foundation.framework */; };
 		0A6C515A3252A445F51818EE31BEC3CE /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC90827286DF14F481B1BBB8146B4B94 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D870276810CB1ABFA1BE969838D307E /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BE339D1545A48B0D2FDFED8327418D /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22123FCB4686B9309F6A911F95A2B08A /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 64432E10921589E8CA4E34CEC24F6EE4 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22FB95A710629558EBC338FE48AE57FA /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF24E5CD133019D49F457C4B1208D9C /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28279087DD5F4EB86E296CF9CAF449C6 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = BA47B19F17B70FEEB18B79950A472105 /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		292AC2B953607298BFB0A595796656C9 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = D787F858F26C301FF73BE2B38E9956DE /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E417F79C96084935AF909E0F274741B /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB650D8BF22C7AFD8B063B04592F07A4 /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B9660A5E42379A14727FE1A74AFBB17 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = DED9BBD98A7292FF1F852BDB52EA360E /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E718C8DC5DD8D12EDED0FFBF72713B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6727B7686E696FF460B7134AFA8D27B /* Foundation.framework */; };
-		47F837390ED3CE49DB438F691DB0CC7E /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = FF910425F6ECC7DDAAF412FE573C66C7 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F090BA27E8D1CA2B65F9F10506AE69A /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 192F47E4F9E4BCE16C05E749EBC75C7C /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F6244DB9AC90922AA0D09292CBB880E /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D6C703CDDA170351C253BC2C169E68 /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6399516189A1D1C2E2C6D0D963963F55 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E027190E312A36CBC92B4448A0275B /* CSS.swift */; };
-		6B49C15A3E8BC6635D240418477395BB /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4A1F21EEB5C19D26B501CBE37F71FB /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E84CB702307066F73A0EE8593390E1A /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AE284C41171267D71E05DA6C958AA38 /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		739629FB72E8B1A844D0A610D69D2BC1 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD9057C31E6E01F808E616F62D923F /* Kanna.swift */; };
-		995420F1D7954486B67AD5546294C500 /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2E8A0ADBE121AB0E038E1F4757F253 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A48F78162D9B8FABF06FDBF115874750 /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 604B47FA1EE68F5DAEEDC86AF3E604BA /* Kanna-dummy.m */; };
-		A8938FEDC7A9DB85A4160C55A58EEEAB /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = AE7C149D54A92EFEA8BA0C1457CAAFD9 /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8BD70B5B1D2EDD4D5784A74721142F5 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35FD2D6B75774AA5508D4A54E707E4 /* HTMLParser.swift */; };
-		AD7DE11EC36CE1736FF8C13E785C327B /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = AC49DC8D55A7B291BE189065E9AA310D /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0C7682F9ABFC6BD5209E97215B58D4E /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6DBE255BC5682277269544CBAF1C22 /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B99ED151DE547330BC6334FF18D2AEA7 /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = 540CBDF664FEBEF45B616CC632083BBD /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE90EFD475AD90E9AE3534C7DF17F5F2 /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = FBE6A11CCF645C67F2102763314A8CAC /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C010A1117D807C2B00533EB43300807F /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 500D2B3648F26A441BAA3AE42765B283 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C07301BBEF37752CB5187DFE47DE3685 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2B408558884AD075F84312FBE232BF /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4561F6510D7EAEA8D18CEEAAE4CF3DF /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = F49706274A573A43C3BD592A9195D88C /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D26294E2BEA9EBC1EE0DEC1B155B1686 /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = E3B142470F0149EDB89993F71433BCAE /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD9168F11EDB06707CD5B6819A3A3CE0 /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 46DA60B688FAFD60BA8A72C33B9E0724 /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE863C3201FADC12FBFFA969146C1702 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873F122AF89F021C3818E765F1C6CB1 /* libxmlParserOption.swift */; };
-		E1E4ADFBBADB5CC8902F95248CD05602 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D95415FC9D27F68798B78A7BE0D56AC /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6A75E3FB4C3653AA51FECF7DFCF87 /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC4177E0199039E8C205800B0B89B69 /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F00C18C981BA9C2A1475DB8047F23255 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D78860F0417D3508EA10E37093C31 /* libxmlHTMLDocument.swift */; };
+		0F15213BC511B6FA92C02C488FBC52A9 /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = 750EC5869E798FD22AAF78A6B89D1190 /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E9AC784489135DF90E6283465831F /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A44FF65B95B85F9639A8508B331D3B1 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2655A959FABEECC49AB7336ACBD9AEEF /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 9174BF356FE2CF9F1C145658202E555F /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E21E913E7DFEB1144344CFE2F61EDF /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9EAA690B32F28D6D43D4B6E4AC1969 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A15114E75E24D43F68989417F471F1A /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = 96655CC5C45B352F562E5BCB7B2C3ABC /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F0CA4FCA95B6602BB18984321CCF872 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 105C9DF5414A78D45778053AB774CB7A /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33CFB5C1334D03E4D793C4B1911758DC /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 225D84EF1C2BD60CE270ACBC90E04578 /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3897C9ECDA894C479C5D40CDD2EA774B /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2098B33EDD65FAF1AF9C4D02E0D017AA /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		393381EB7C3692085F7AA2A1DFC4CD12 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = 5448F1C69164559ADCED27A66E395048 /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E718C8DC5DD8D12EDED0FFBF72713B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4AC5DA30DF5BD27F67E5C48ED7BEA9 /* Foundation.framework */; };
+		3F12207CE3C1EAC65E0D1291E1F0BFE7 /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = FF60664306D9B5B75A1AFC6370FAC146 /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55BB01EC659FDA2C7FC252988B93161D /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 124019FC1125A2ED55D3B678BE79A260 /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56D83B92409B29D9E1E2D9D39DABECA1 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = D55ED72ED313CA376564AD87CD6658F9 /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5891AEB74BDFB0A6135213A455B577EB /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 55BF2F1762514900F40A0F313A87A46B /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AD0D02A8E92B6158308DC786091BD84 /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6255A335F2A1283E3EF91AF28298F4 /* Kanna-dummy.m */; };
+		647EF24ABC2FF4FD50A170C708B5B366 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1F931A51AD37FAD6FF09777E14610 /* libxmlParserOption.swift */; };
+		6D05A7C4D7717C4773A22F10066E6B86 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43477A66C7EAA50C10ABDB2C5997ADEF /* HTMLParser.swift */; };
+		6D3D6F90B679117C96CCADC4DF3C71A9 /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7E644E8B8C5BCD99CD0B38A108BC94 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81531FE46197EF8013EEC0435D2F2A92 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = CDADFD3090F4BB2607430DFAB823F9A6 /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85885FB25C9FC00609A130384BEEBBCA /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C217AA9F2D8AE4F85C730D95FCA68 /* CSS.swift */; };
+		8C8E643BBBBC8354E2596229F2E101CA /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D45C84E73B9C2754B2581659B073F4 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		967CE4069C96872A5F87FE1D13385381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4AC5DA30DF5BD27F67E5C48ED7BEA9 /* Foundation.framework */; };
+		97DEEE578CFB4E1DDA52A11B24222201 /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA4C7C71DCA38156D17D00EF2E3B287 /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		990C2C7C06A68BEEC8F160244701F1A4 /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = 71596E3EF284D9437E636D4E7D71CED8 /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA7ECBFAE4611F43F143196D2D34AD8 /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3F33D6E0ED9A3C16A6EBF7C7D00B6D /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E2261EF4E2B8CA4CFE8AAAF825C8CCA /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC4561073DF9C68B9CB70AC69CC680A /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A144D76B009AA32FE506BDCACBF766DB /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 559FA63AE38BEC18F1C86BFA05E5632D /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF9E4CA86BBBCCE3DCE088AF8F861A7B /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CF0617CDEFFB4695B7C0714BA7FB4 /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C121F47225291C14E0450E87948B903E /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9166E2DE2C313E275886DE95795E113 /* Kanna.swift */; };
+		CA068FA1B6F6E09A717782FF4294013E /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE6EDE471AF7287E65629E772FB32FC /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE681667E3E014066653A6B1092A4BD5 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = 85CC02B39ED29CDCAA72D15018AF5C84 /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6DAF52F22E95BE82172BB3F70D01489 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = D01A6CD9289A30B862C8AB73F204C067 /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8BB43B00D1653E31E0D80C3B15AAF9D /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321FF1DB35D35DC331998B54B677A2 /* libxmlHTMLNode.swift */; };
+		EAEDF48FEF2C8410E02800668C4AF434 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C020A205B5D37EA5D8EF2720D4C46D /* libxmlHTMLDocument.swift */; };
 		F0750E010D7617E8794DBD1C3BA8651E /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0C5A0C981042103C9D1492BED8A3F /* Pods-dummy.m */; };
-		F9D09F7AE2830B4451BCDAFAC5F78099 /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FD53392D389624B5D947972E31EBAD1 /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFA1AD14D56250599339F756E468189F /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94085EC12DB5CE9D9F7DD49BE1BD92 /* libxmlHTMLNode.swift */; };
+		F8A25DBF9FE076F128787D45E43EC372 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1EEBFE4E52A1528BA9C76298A07A96 /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFF957E98839A6B979400B39348CFC58 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 7199580C203C3F581C40D254E2D5A9BB /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05149A93A97C454D3254ADFB516B41B4 /* PBXContainerItemProxy */ = {
+		903201ECE954CEF31EAF2359CA9E6C3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5C7F85DC8B07EEC1CA1BD4D038E60E16;
+			remoteGlobalIDString = 5079A8F9A9AF2463C6C6A005E07C9314;
 			remoteInfo = Kanna;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D95415FC9D27F68798B78A7BE0D56AC /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = Library/libxml/threads.h; sourceTree = "<group>"; };
-		192F47E4F9E4BCE16C05E749EBC75C7C /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = Library/libxml/HTMLparser.h; sourceTree = "<group>"; };
-		26BE339D1545A48B0D2FDFED8327418D /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = Library/libxml/encoding.h; sourceTree = "<group>"; };
-		2E2B408558884AD075F84312FBE232BF /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = Library/libxml/xmlerror.h; sourceTree = "<group>"; };
-		3873F122AF89F021C3818E765F1C6CB1 /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Source/libxml/libxmlParserOption.swift; sourceTree = "<group>"; };
-		3D4A1F21EEB5C19D26B501CBE37F71FB /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = Library/libxml/xpath.h; sourceTree = "<group>"; };
-		3DF24E5CD133019D49F457C4B1208D9C /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = Library/libxml/xmlversion.h; sourceTree = "<group>"; };
-		3FD53392D389624B5D947972E31EBAD1 /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = Library/libxml/SAX.h; sourceTree = "<group>"; };
-		46DA60B688FAFD60BA8A72C33B9E0724 /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = Library/libxml/xlink.h; sourceTree = "<group>"; };
+		0D6255A335F2A1283E3EF91AF28298F4 /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
+		105C9DF5414A78D45778053AB774CB7A /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = Library/libxml/globals.h; sourceTree = "<group>"; };
+		11C020A205B5D37EA5D8EF2720D4C46D /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Source/libxml/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		124019FC1125A2ED55D3B678BE79A260 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Library/libxml/parser.h; sourceTree = "<group>"; };
+		1D1EEBFE4E52A1528BA9C76298A07A96 /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = Library/libxml/xmlIO.h; sourceTree = "<group>"; };
+		2098B33EDD65FAF1AF9C4D02E0D017AA /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = Library/libxml/encoding.h; sourceTree = "<group>"; };
+		225D84EF1C2BD60CE270ACBC90E04578 /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
+		2AA4C7C71DCA38156D17D00EF2E3B287 /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = Library/libxml/xmlregexp.h; sourceTree = "<group>"; };
+		342C217AA9F2D8AE4F85C730D95FCA68 /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Source/CSS.swift; sourceTree = "<group>"; };
+		3A44FF65B95B85F9639A8508B331D3B1 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = Library/libxml/xmlmemory.h; sourceTree = "<group>"; };
+		43477A66C7EAA50C10ABDB2C5997ADEF /* HTMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLParser.swift; path = Source/_obsolete/HTMLParser.swift; sourceTree = "<group>"; };
 		4BCF500E0656597FC81930E9F3FB2C01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2E8A0ADBE121AB0E038E1F4757F253 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = Library/libxml/xpathInternals.h; sourceTree = "<group>"; };
-		4E6DBE255BC5682277269544CBAF1C22 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = Library/libxml/tree.h; sourceTree = "<group>"; };
-		500D2B3648F26A441BAA3AE42765B283 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = Library/libxml/xmlmemory.h; sourceTree = "<group>"; };
-		540CBDF664FEBEF45B616CC632083BBD /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Source/Kanna.h; sourceTree = "<group>"; };
-		604B47FA1EE68F5DAEEDC86AF3E604BA /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
-		64432E10921589E8CA4E34CEC24F6EE4 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = Library/libxml/list.h; sourceTree = "<group>"; };
-		68D6C703CDDA170351C253BC2C169E68 /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = Library/libxml/SAX2.h; sourceTree = "<group>"; };
-		6AC4334FFE352A0499D743B6D6105886 /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = Library/libxml/xmlIO.h; sourceTree = "<group>"; };
+		5448F1C69164559ADCED27A66E395048 /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = Library/libxml/threads.h; sourceTree = "<group>"; };
+		559FA63AE38BEC18F1C86BFA05E5632D /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = Library/libxml/xmlversion.h; sourceTree = "<group>"; };
+		55BF2F1762514900F40A0F313A87A46B /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = Library/libxml/xmlerror.h; sourceTree = "<group>"; };
+		6FF1F931A51AD37FAD6FF09777E14610 /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Source/libxml/libxmlParserOption.swift; sourceTree = "<group>"; };
+		71596E3EF284D9437E636D4E7D71CED8 /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = Library/libxml/HTMLtree.h; sourceTree = "<group>"; };
+		7199580C203C3F581C40D254E2D5A9BB /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = Library/libxml/hash.h; sourceTree = "<group>"; };
 		72C0C5A0C981042103C9D1492BED8A3F /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		72E004ED92E79681ADB84FC05A0873BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		750EC5869E798FD22AAF78A6B89D1190 /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Source/Kanna.h; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		7AE284C41171267D71E05DA6C958AA38 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Library/libxml/parser.h; sourceTree = "<group>"; };
-		7F94085EC12DB5CE9D9F7DD49BE1BD92 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Source/libxml/libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		79D45C84E73B9C2754B2581659B073F4 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = Library/libxml/xmlautomata.h; sourceTree = "<group>"; };
+		85CC02B39ED29CDCAA72D15018AF5C84 /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = Library/libxml/xmlexports.h; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		8E9D78860F0417D3508EA10E37093C31 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Source/libxml/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
-		95E027190E312A36CBC92B4448A0275B /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Source/CSS.swift; sourceTree = "<group>"; };
+		9174BF356FE2CF9F1C145658202E555F /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = Library/libxml/list.h; sourceTree = "<group>"; };
+		96655CC5C45B352F562E5BCB7B2C3ABC /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = Library/libxml/valid.h; sourceTree = "<group>"; };
 		9A5DB875AEB9604AB8A1E9376344F642 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C429446305D41B125D7370ADC19A5A2 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9EAA690B32F28D6D43D4B6E4AC1969 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = Library/libxml/xpath.h; sourceTree = "<group>"; };
 		ABEB11EC16551256BF4C164F470C6463 /* Kanna.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.xcconfig; sourceTree = "<group>"; };
-		AC49DC8D55A7B291BE189065E9AA310D /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = Library/libxml/dict.h; sourceTree = "<group>"; };
-		AE7C149D54A92EFEA8BA0C1457CAAFD9 /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = Library/libxml/valid.h; sourceTree = "<group>"; };
 		B4DBF6B0F7BEEB794727E98A0CCC69C2 /* Kanna-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-prefix.pch"; sourceTree = "<group>"; };
 		B8EB6480FC75F4A4F7FBC041A46FBC58 /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kanna.modulemap; sourceTree = "<group>"; };
-		BA47B19F17B70FEEB18B79950A472105 /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = Library/libxml/xmlexports.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC90827286DF14F481B1BBB8146B4B94 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		BD35FD2D6B75774AA5508D4A54E707E4 /* HTMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLParser.swift; path = Source/_obsolete/HTMLParser.swift; sourceTree = "<group>"; };
-		C435A8016253FE7202650B511AD93536 /* Kanna-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Kanna-Private.xcconfig"; sourceTree = "<group>"; };
-		C6727B7686E696FF460B7134AFA8D27B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CDADFD3090F4BB2607430DFAB823F9A6 /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = Library/libxml/dict.h; sourceTree = "<group>"; };
+		CE6CF0617CDEFFB4695B7C0714BA7FB4 /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = Library/libxml/HTMLparser.h; sourceTree = "<group>"; };
+		D01A6CD9289A30B862C8AB73F204C067 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = Library/libxml/tree.h; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D1FD9057C31E6E01F808E616F62D923F /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Source/Kanna.swift; sourceTree = "<group>"; };
-		D787F858F26C301FF73BE2B38E9956DE /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = Library/libxml/entities.h; sourceTree = "<group>"; };
-		DB650D8BF22C7AFD8B063B04592F07A4 /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
-		DDC4177E0199039E8C205800B0B89B69 /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = Library/libxml/xmlstring.h; sourceTree = "<group>"; };
-		DED9BBD98A7292FF1F852BDB52EA360E /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = Library/libxml/globals.h; sourceTree = "<group>"; };
-		E3B142470F0149EDB89993F71433BCAE /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = Library/libxml/HTMLtree.h; sourceTree = "<group>"; };
+		D55ED72ED313CA376564AD87CD6658F9 /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = Library/libxml/entities.h; sourceTree = "<group>"; };
+		DBC4561073DF9C68B9CB70AC69CC680A /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = Library/libxml/xmlstring.h; sourceTree = "<group>"; };
+		DC4AC5DA30DF5BD27F67E5C48ED7BEA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCE6EDE471AF7287E65629E772FB32FC /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = Library/libxml/SAX.h; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F49706274A573A43C3BD592A9195D88C /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = Library/libxml/hash.h; sourceTree = "<group>"; };
-		FBE6A11CCF645C67F2102763314A8CAC /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = Library/libxml/xmlregexp.h; sourceTree = "<group>"; };
-		FECCC395E35B83B9DC58B943E0C78875 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9166E2DE2C313E275886DE95795E113 /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Source/Kanna.swift; sourceTree = "<group>"; };
+		EF7E644E8B8C5BCD99CD0B38A108BC94 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = Library/libxml/xpathInternals.h; sourceTree = "<group>"; };
+		F6321FF1DB35D35DC331998B54B677A2 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Source/libxml/libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		FC3F33D6E0ED9A3C16A6EBF7C7D00B6D /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = Library/libxml/SAX2.h; sourceTree = "<group>"; };
+		FD56BF8CAB8189EACE9ABEF0056E57AC /* Kanna-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Kanna-Private.xcconfig"; sourceTree = "<group>"; };
+		FF60664306D9B5B75A1AFC6370FAC146 /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = Library/libxml/xlink.h; sourceTree = "<group>"; };
 		FF61198D230DE9E91444FBD46850D93B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		FF910425F6ECC7DDAAF412FE573C66C7 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = Library/libxml/xmlautomata.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5104FEB7A66594DFC4BCB43E5EEA8126 /* Frameworks */ = {
+		4574A5006C1A8C986FE503C249CE09FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06BB80C489338CC337B3EADF7064EA5D /* Foundation.framework in Frameworks */,
+				967CE4069C96872A5F87FE1D13385381 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,38 +136,38 @@
 		1FC06526E365F96F33446CE9E56C2CF8 /* Kanna */ = {
 			isa = PBXGroup;
 			children = (
-				95E027190E312A36CBC92B4448A0275B /* CSS.swift */,
-				BD35FD2D6B75774AA5508D4A54E707E4 /* HTMLParser.swift */,
-				192F47E4F9E4BCE16C05E749EBC75C7C /* HTMLparser.h */,
-				E3B142470F0149EDB89993F71433BCAE /* HTMLtree.h */,
-				540CBDF664FEBEF45B616CC632083BBD /* Kanna.h */,
-				D1FD9057C31E6E01F808E616F62D923F /* Kanna.swift */,
-				3FD53392D389624B5D947972E31EBAD1 /* SAX.h */,
-				68D6C703CDDA170351C253BC2C169E68 /* SAX2.h */,
-				AC49DC8D55A7B291BE189065E9AA310D /* dict.h */,
-				26BE339D1545A48B0D2FDFED8327418D /* encoding.h */,
-				D787F858F26C301FF73BE2B38E9956DE /* entities.h */,
-				DED9BBD98A7292FF1F852BDB52EA360E /* globals.h */,
-				F49706274A573A43C3BD592A9195D88C /* hash.h */,
-				8E9D78860F0417D3508EA10E37093C31 /* libxmlHTMLDocument.swift */,
-				7F94085EC12DB5CE9D9F7DD49BE1BD92 /* libxmlHTMLNode.swift */,
-				3873F122AF89F021C3818E765F1C6CB1 /* libxmlParserOption.swift */,
-				64432E10921589E8CA4E34CEC24F6EE4 /* list.h */,
-				7AE284C41171267D71E05DA6C958AA38 /* parser.h */,
-				0D95415FC9D27F68798B78A7BE0D56AC /* threads.h */,
-				4E6DBE255BC5682277269544CBAF1C22 /* tree.h */,
-				AE7C149D54A92EFEA8BA0C1457CAAFD9 /* valid.h */,
-				46DA60B688FAFD60BA8A72C33B9E0724 /* xlink.h */,
-				6AC4334FFE352A0499D743B6D6105886 /* xmlIO.h */,
-				FF910425F6ECC7DDAAF412FE573C66C7 /* xmlautomata.h */,
-				2E2B408558884AD075F84312FBE232BF /* xmlerror.h */,
-				BA47B19F17B70FEEB18B79950A472105 /* xmlexports.h */,
-				500D2B3648F26A441BAA3AE42765B283 /* xmlmemory.h */,
-				FBE6A11CCF645C67F2102763314A8CAC /* xmlregexp.h */,
-				DDC4177E0199039E8C205800B0B89B69 /* xmlstring.h */,
-				3DF24E5CD133019D49F457C4B1208D9C /* xmlversion.h */,
-				3D4A1F21EEB5C19D26B501CBE37F71FB /* xpath.h */,
-				4E2E8A0ADBE121AB0E038E1F4757F253 /* xpathInternals.h */,
+				342C217AA9F2D8AE4F85C730D95FCA68 /* CSS.swift */,
+				43477A66C7EAA50C10ABDB2C5997ADEF /* HTMLParser.swift */,
+				CE6CF0617CDEFFB4695B7C0714BA7FB4 /* HTMLparser.h */,
+				71596E3EF284D9437E636D4E7D71CED8 /* HTMLtree.h */,
+				750EC5869E798FD22AAF78A6B89D1190 /* Kanna.h */,
+				E9166E2DE2C313E275886DE95795E113 /* Kanna.swift */,
+				DCE6EDE471AF7287E65629E772FB32FC /* SAX.h */,
+				FC3F33D6E0ED9A3C16A6EBF7C7D00B6D /* SAX2.h */,
+				CDADFD3090F4BB2607430DFAB823F9A6 /* dict.h */,
+				2098B33EDD65FAF1AF9C4D02E0D017AA /* encoding.h */,
+				D55ED72ED313CA376564AD87CD6658F9 /* entities.h */,
+				105C9DF5414A78D45778053AB774CB7A /* globals.h */,
+				7199580C203C3F581C40D254E2D5A9BB /* hash.h */,
+				11C020A205B5D37EA5D8EF2720D4C46D /* libxmlHTMLDocument.swift */,
+				F6321FF1DB35D35DC331998B54B677A2 /* libxmlHTMLNode.swift */,
+				6FF1F931A51AD37FAD6FF09777E14610 /* libxmlParserOption.swift */,
+				9174BF356FE2CF9F1C145658202E555F /* list.h */,
+				124019FC1125A2ED55D3B678BE79A260 /* parser.h */,
+				5448F1C69164559ADCED27A66E395048 /* threads.h */,
+				D01A6CD9289A30B862C8AB73F204C067 /* tree.h */,
+				96655CC5C45B352F562E5BCB7B2C3ABC /* valid.h */,
+				FF60664306D9B5B75A1AFC6370FAC146 /* xlink.h */,
+				1D1EEBFE4E52A1528BA9C76298A07A96 /* xmlIO.h */,
+				79D45C84E73B9C2754B2581659B073F4 /* xmlautomata.h */,
+				55BF2F1762514900F40A0F313A87A46B /* xmlerror.h */,
+				85CC02B39ED29CDCAA72D15018AF5C84 /* xmlexports.h */,
+				3A44FF65B95B85F9639A8508B331D3B1 /* xmlmemory.h */,
+				2AA4C7C71DCA38156D17D00EF2E3B287 /* xmlregexp.h */,
+				DBC4561073DF9C68B9CB70AC69CC680A /* xmlstring.h */,
+				559FA63AE38BEC18F1C86BFA05E5632D /* xmlversion.h */,
+				9E9EAA690B32F28D6D43D4B6E4AC1969 /* xpath.h */,
+				EF7E644E8B8C5BCD99CD0B38A108BC94 /* xpathInternals.h */,
 				FDD60B72B647B976C9FB6C3AD12B240A /* Support Files */,
 			);
 			path = Kanna;
@@ -176,7 +176,7 @@
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C6727B7686E696FF460B7134AFA8D27B /* Foundation.framework */,
+				DC4AC5DA30DF5BD27F67E5C48ED7BEA9 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FECCC395E35B83B9DC58B943E0C78875 /* Kanna.framework */,
+				9C429446305D41B125D7370ADC19A5A2 /* Kanna.framework */,
 				9A5DB875AEB9604AB8A1E9376344F642 /* Pods.framework */,
 			);
 			name = Products;
@@ -249,10 +249,10 @@
 				4BCF500E0656597FC81930E9F3FB2C01 /* Info.plist */,
 				B8EB6480FC75F4A4F7FBC041A46FBC58 /* Kanna.modulemap */,
 				ABEB11EC16551256BF4C164F470C6463 /* Kanna.xcconfig */,
-				C435A8016253FE7202650B511AD93536 /* Kanna-Private.xcconfig */,
-				604B47FA1EE68F5DAEEDC86AF3E604BA /* Kanna-dummy.m */,
+				FD56BF8CAB8189EACE9ABEF0056E57AC /* Kanna-Private.xcconfig */,
+				0D6255A335F2A1283E3EF91AF28298F4 /* Kanna-dummy.m */,
 				B4DBF6B0F7BEEB794727E98A0CCC69C2 /* Kanna-prefix.pch */,
-				DB650D8BF22C7AFD8B063B04592F07A4 /* Kanna-umbrella.h */,
+				225D84EF1C2BD60CE270ACBC90E04578 /* Kanna-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Kanna";
@@ -269,50 +269,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		772A0949DCC781A36D6D8DA738A2D4D1 /* Headers */ = {
+		FB475F21CA0F690C7DC1ECF028558146 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F090BA27E8D1CA2B65F9F10506AE69A /* HTMLparser.h in Headers */,
-				D26294E2BEA9EBC1EE0DEC1B155B1686 /* HTMLtree.h in Headers */,
-				2E417F79C96084935AF909E0F274741B /* Kanna-umbrella.h in Headers */,
-				B99ED151DE547330BC6334FF18D2AEA7 /* Kanna.h in Headers */,
-				F9D09F7AE2830B4451BCDAFAC5F78099 /* SAX.h in Headers */,
-				5F6244DB9AC90922AA0D09292CBB880E /* SAX2.h in Headers */,
-				AD7DE11EC36CE1736FF8C13E785C327B /* dict.h in Headers */,
-				0D870276810CB1ABFA1BE969838D307E /* encoding.h in Headers */,
-				292AC2B953607298BFB0A595796656C9 /* entities.h in Headers */,
-				3B9660A5E42379A14727FE1A74AFBB17 /* globals.h in Headers */,
-				C4561F6510D7EAEA8D18CEEAAE4CF3DF /* hash.h in Headers */,
-				22123FCB4686B9309F6A911F95A2B08A /* list.h in Headers */,
-				6E84CB702307066F73A0EE8593390E1A /* parser.h in Headers */,
-				E1E4ADFBBADB5CC8902F95248CD05602 /* threads.h in Headers */,
-				B0C7682F9ABFC6BD5209E97215B58D4E /* tree.h in Headers */,
-				A8938FEDC7A9DB85A4160C55A58EEEAB /* valid.h in Headers */,
-				DD9168F11EDB06707CD5B6819A3A3CE0 /* xlink.h in Headers */,
-				03AC74297690F5853131440B227B5620 /* xmlIO.h in Headers */,
-				47F837390ED3CE49DB438F691DB0CC7E /* xmlautomata.h in Headers */,
-				C07301BBEF37752CB5187DFE47DE3685 /* xmlerror.h in Headers */,
-				28279087DD5F4EB86E296CF9CAF449C6 /* xmlexports.h in Headers */,
-				C010A1117D807C2B00533EB43300807F /* xmlmemory.h in Headers */,
-				BE90EFD475AD90E9AE3534C7DF17F5F2 /* xmlregexp.h in Headers */,
-				E5E6A75E3FB4C3653AA51FECF7DFCF87 /* xmlstring.h in Headers */,
-				22FB95A710629558EBC338FE48AE57FA /* xmlversion.h in Headers */,
-				6B49C15A3E8BC6635D240418477395BB /* xpath.h in Headers */,
-				995420F1D7954486B67AD5546294C500 /* xpathInternals.h in Headers */,
+				BF9E4CA86BBBCCE3DCE088AF8F861A7B /* HTMLparser.h in Headers */,
+				990C2C7C06A68BEEC8F160244701F1A4 /* HTMLtree.h in Headers */,
+				33CFB5C1334D03E4D793C4B1911758DC /* Kanna-umbrella.h in Headers */,
+				0F15213BC511B6FA92C02C488FBC52A9 /* Kanna.h in Headers */,
+				CA068FA1B6F6E09A717782FF4294013E /* SAX.h in Headers */,
+				9AA7ECBFAE4611F43F143196D2D34AD8 /* SAX2.h in Headers */,
+				81531FE46197EF8013EEC0435D2F2A92 /* dict.h in Headers */,
+				3897C9ECDA894C479C5D40CDD2EA774B /* encoding.h in Headers */,
+				56D83B92409B29D9E1E2D9D39DABECA1 /* entities.h in Headers */,
+				2F0CA4FCA95B6602BB18984321CCF872 /* globals.h in Headers */,
+				FFF957E98839A6B979400B39348CFC58 /* hash.h in Headers */,
+				2655A959FABEECC49AB7336ACBD9AEEF /* list.h in Headers */,
+				55BB01EC659FDA2C7FC252988B93161D /* parser.h in Headers */,
+				393381EB7C3692085F7AA2A1DFC4CD12 /* threads.h in Headers */,
+				D6DAF52F22E95BE82172BB3F70D01489 /* tree.h in Headers */,
+				2A15114E75E24D43F68989417F471F1A /* valid.h in Headers */,
+				3F12207CE3C1EAC65E0D1291E1F0BFE7 /* xlink.h in Headers */,
+				F8A25DBF9FE076F128787D45E43EC372 /* xmlIO.h in Headers */,
+				8C8E643BBBBC8354E2596229F2E101CA /* xmlautomata.h in Headers */,
+				5891AEB74BDFB0A6135213A455B577EB /* xmlerror.h in Headers */,
+				CE681667E3E014066653A6B1092A4BD5 /* xmlexports.h in Headers */,
+				1A2E9AC784489135DF90E6283465831F /* xmlmemory.h in Headers */,
+				97DEEE578CFB4E1DDA52A11B24222201 /* xmlregexp.h in Headers */,
+				9E2261EF4E2B8CA4CFE8AAAF825C8CCA /* xmlstring.h in Headers */,
+				A144D76B009AA32FE506BDCACBF766DB /* xmlversion.h in Headers */,
+				27E21E913E7DFEB1144344CFE2F61EDF /* xpath.h in Headers */,
+				6D3D6F90B679117C96CCADC4DF3C71A9 /* xpathInternals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5C7F85DC8B07EEC1CA1BD4D038E60E16 /* Kanna */ = {
+		5079A8F9A9AF2463C6C6A005E07C9314 /* Kanna */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBBD012694544A26F699D4C4C0F871FC /* Build configuration list for PBXNativeTarget "Kanna" */;
+			buildConfigurationList = 0751D88837211242F7941C6176ED7CDB /* Build configuration list for PBXNativeTarget "Kanna" */;
 			buildPhases = (
-				D3241958E64E4349EA933C7EA1CCCA5F /* Sources */,
-				5104FEB7A66594DFC4BCB43E5EEA8126 /* Frameworks */,
-				772A0949DCC781A36D6D8DA738A2D4D1 /* Headers */,
+				C2C5E317800A47B3F1E31BF8C6B3E42F /* Sources */,
+				4574A5006C1A8C986FE503C249CE09FD /* Frameworks */,
+				FB475F21CA0F690C7DC1ECF028558146 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -320,7 +320,7 @@
 			);
 			name = Kanna;
 			productName = Kanna;
-			productReference = FECCC395E35B83B9DC58B943E0C78875 /* Kanna.framework */;
+			productReference = 9C429446305D41B125D7370ADC19A5A2 /* Kanna.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6C201BE953B3EC5A31BE63EB23457B01 /* Pods */ = {
@@ -334,7 +334,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				48BCF0B8FFBB18A6B1F2B1D02933AA60 /* PBXTargetDependency */,
+				9000D8103E5C97B21A87C3FEA0FC5A27 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -362,7 +362,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C7F85DC8B07EEC1CA1BD4D038E60E16 /* Kanna */,
+				5079A8F9A9AF2463C6C6A005E07C9314 /* Kanna */,
 				6C201BE953B3EC5A31BE63EB23457B01 /* Pods */,
 			);
 		};
@@ -377,60 +377,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3241958E64E4349EA933C7EA1CCCA5F /* Sources */ = {
+		C2C5E317800A47B3F1E31BF8C6B3E42F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6399516189A1D1C2E2C6D0D963963F55 /* CSS.swift in Sources */,
-				A8BD70B5B1D2EDD4D5784A74721142F5 /* HTMLParser.swift in Sources */,
-				A48F78162D9B8FABF06FDBF115874750 /* Kanna-dummy.m in Sources */,
-				739629FB72E8B1A844D0A610D69D2BC1 /* Kanna.swift in Sources */,
-				F00C18C981BA9C2A1475DB8047F23255 /* libxmlHTMLDocument.swift in Sources */,
-				FFA1AD14D56250599339F756E468189F /* libxmlHTMLNode.swift in Sources */,
-				DE863C3201FADC12FBFFA969146C1702 /* libxmlParserOption.swift in Sources */,
+				85885FB25C9FC00609A130384BEEBBCA /* CSS.swift in Sources */,
+				6D05A7C4D7717C4773A22F10066E6B86 /* HTMLParser.swift in Sources */,
+				5AD0D02A8E92B6158308DC786091BD84 /* Kanna-dummy.m in Sources */,
+				C121F47225291C14E0450E87948B903E /* Kanna.swift in Sources */,
+				EAEDF48FEF2C8410E02800668C4AF434 /* libxmlHTMLDocument.swift in Sources */,
+				D8BB43B00D1653E31E0D80C3B15AAF9D /* libxmlHTMLNode.swift in Sources */,
+				647EF24ABC2FF4FD50A170C708B5B366 /* libxmlParserOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		48BCF0B8FFBB18A6B1F2B1D02933AA60 /* PBXTargetDependency */ = {
+		9000D8103E5C97B21A87C3FEA0FC5A27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kanna;
-			target = 5C7F85DC8B07EEC1CA1BD4D038E60E16 /* Kanna */;
-			targetProxy = 05149A93A97C454D3254ADFB516B41B4 /* PBXContainerItemProxy */;
+			target = 5079A8F9A9AF2463C6C6A005E07C9314 /* Kanna */;
+			targetProxy = 903201ECE954CEF31EAF2359CA9E6C3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2E598DADB9C15A486DFF304B3F78EA27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C435A8016253FE7202650B511AD93536 /* Kanna-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.4;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.4;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kanna/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Kanna;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3F7CC3D1E148194485A4A8C784D21A2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF61198D230DE9E91444FBD46850D93B /* Pods.debug.xcconfig */;
@@ -461,14 +433,14 @@
 			};
 			name = Debug;
 		};
-		81BF69280EC1F87A2745F17351D0143C /* Release */ = {
+		50CF795DDD1193C1867C8574B64BE4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C435A8016253FE7202650B511AD93536 /* Kanna-Private.xcconfig */;
+			baseConfigurationReference = FD56BF8CAB8189EACE9ABEF0056E57AC /* Kanna-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.4;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -478,15 +450,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Kanna;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		9EB645C612834738B99727720210C23E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -556,6 +529,33 @@
 			};
 			name = Release;
 		};
+		CF784E81B05899D9169A15E877F3D5B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD56BF8CAB8189EACE9ABEF0056E57AC /* Kanna-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kanna/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Kanna;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E39CD1E764776175CB82EEC82A6C9948 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -593,6 +593,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0751D88837211242F7941C6176ED7CDB /* Build configuration list for PBXNativeTarget "Kanna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CF795DDD1193C1867C8574B64BE4BE /* Debug */,
+				CF784E81B05899D9169A15E877F3D5B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2481576D0C7BACCD97AC904565BC9855 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -607,15 +616,6 @@
 			buildConfigurations = (
 				9EB645C612834738B99727720210C23E /* Debug */,
 				E39CD1E764776175CB82EEC82A6C9948 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BBBD012694544A26F699D4C4C0F871FC /* Build configuration list for PBXNativeTarget "Kanna" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E598DADB9C15A486DFF304B3F78EA27 /* Debug */,
-				81BF69280EC1F87A2745F17351D0143C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

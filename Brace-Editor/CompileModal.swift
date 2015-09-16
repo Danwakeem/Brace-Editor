@@ -24,7 +24,7 @@ class CompileModal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var swipeDown = UISwipeGestureRecognizer(target: self, action: "closeButton:")
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "closeButton:")
         swipeDown.direction = .Down
         swipeDown.numberOfTouchesRequired = 1
         self.view.addGestureRecognizer(swipeDown)

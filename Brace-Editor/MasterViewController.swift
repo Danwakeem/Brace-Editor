@@ -35,7 +35,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
     }
@@ -46,15 +46,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     func closePop(sender:AnyObject) {
-        /*
-        if let title = self.popupViewController?.programTitle.text {
-            if let language = self.popupViewController?.selectedLanguage {
-                var arr = [title,language]
-                self.insertNewObject(arr)
-                self.dismissViewControllerAnimated(true, completion: {})
-            }
-        }
-        */
         self.dismissViewControllerAnimated(true, completion: {})
     }
     
@@ -64,7 +55,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func modal(sender: AnyObject) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        self.popupViewController = (sb.instantiateViewControllerWithIdentifier("popper")! as! PopViewController)
+        self.popupViewController = (sb.instantiateViewControllerWithIdentifier("popper") as! PopViewController)
         self.popupViewController!.delegate = self
         
         self.popupViewController!.modalTransitionStyle = .CoverVertical
@@ -79,22 +70,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.visualEffectView.removeFromSuperview()
     }
     
-    func insertNewObject(sender: AnyObject) {
+    func insertNewObject(sender: [String?]) {
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) 
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        let title: String = sender[0] as! String
-        let language: String = sender[1] as! String
+        let title: String = sender[0]!
+        let language: String = sender[1]!
         newManagedObject.setValue(title, forKey: "title")
         newManagedObject.setValue(language, forKey: "language")
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
         
         // Save the context.
-        var error: NSError? = nil
-        if !context.save(&error) {
+        do {
+            try context.save()
+        } catch let error1 as NSError {
+            print(error1)
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             //println("Unresolved error \(error), \(error.userInfo)")
@@ -108,13 +101,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     //Add indexPath to object ******
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
             let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
             controller.detailItem = [object,indexPath]
             }
         } else {
-            println("Didnt find segue")
+            print("Didnt find segue")
         }
     }
 
@@ -125,12 +118,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
+        let sectionInfo = self.fetchedResultsController.sections![section] 
         return sectionInfo.numberOfObjects
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -144,12 +137,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
             context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject)
-                
-            var error: NSError? = nil
-            if !context.save(&error) {
+            
+            do {
+                try context.save()
+            } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                //println("Unresolved error \(error), \(error.userInfo)")
+                //print("Unresolved error \(error), \(error.userInfo)")
                 abort()
             }
         }
@@ -177,7 +171,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the sort key as appropriate.
         let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
-        let sortDescriptors = [sortDescriptor]
+        _ = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -187,8 +181,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
-    	var error: NSError? = nil
-    	if !_fetchedResultsController!.performFetch(&error) {
+    	do {
+            try _fetchedResultsController!.performFetch()
+        } catch let error1 as NSError {
+            print(error1)
     	     // Replace this implementation with code to handle the error appropriately.
     	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
              //println("Unresolved error \(error), \(error.userInfo)")
@@ -202,34 +198,32 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         self.tableView.beginUpdates()
     }
-
+    
     func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
         switch type {
-            case .Insert:
-                self.tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            case .Delete:
-                self.tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            default:
-                return
+        case .Insert:
+            self.tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+        case .Delete:
+            self.tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+        default:
+            return
         }
     }
-
+    
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         switch type {
-            case .Insert:
-                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-            case .Delete:
-                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-            case .Update:
-                self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
-            case .Move:
-                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-            default:
-                return
+        case .Insert:
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+        case .Delete:
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+        case .Update:
+            self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
+        case .Move:
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
         }
     }
-
+    
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
     }

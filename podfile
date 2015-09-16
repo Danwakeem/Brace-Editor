@@ -1,2 +1,2 @@
 use_frameworks!
-pod 'Kanna'
+pod 'Kanna', '~> 1.0.0'

@@ -36,25 +36,29 @@ class OnlineCompiler {
     func compileProgram(targetLanguage: String, sourceCode: String) {
         language = targetLanguage
         let source = encodeSourceCode(sourceCode)
-        //So C++ gets encoded as well
         language = encodeSourceCode(language)
-        var session = NSURLSession.sharedSession()
-        var request = NSMutableURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
-        var body = "lang=\(language)&code=\(source)&run=True&submit=Submit"
+        let body = "lang=\(language)&code=\(source)&run=True&submit=Submit"
         request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        print(body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true))
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            if let doc: HTMLDocument = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding){
-                let result = doc.xpath("/html/body/div/table/tr/td/div[2]/table/tr/td[2]/div")
-                if result.text != nil {
-                    self.outPut = result.text
-                    NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: result.text as? AnyObject)
-                } else {
-                    self.outPut = "Network connection problem. Try again."
-                    NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: "Sorry")
+            if data != nil {
+                if let doc: HTMLDocument = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding){
+                    let result = doc.xpath("/html/body/div/table/tr/td/div[2]/table/tr/td[2]/div")
+                    if result.text != nil {
+                        self.outPut = result.text
+                        NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: result.text as? AnyObject)
+                    } else {
+                        self.outPut = "Network connection problem. Try again."
+                        NSNotificationCenter.defaultCenter().postNotificationName(self.notificationKey, object: "Sorry")
+                    }
+                    
                 }
-                
+            } else {
+                print("Data was nil")
             }
         })
         

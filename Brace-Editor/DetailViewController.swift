@@ -46,7 +46,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         // Update the user interface for the detail item.
         var asArray = self.detailItem! as Array
         index = asArray[1] as! NSIndexPath
-        var detail: AnyObject = asArray[0] as AnyObject
+        let detail: AnyObject = asArray[0] as AnyObject
         if let label = self.programSorceCode {
             if let code = detail.valueForKey("code")?.description {
                 label.text = code
@@ -78,19 +78,20 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     }
     
     func setUpTextView() {
-        var arr: NSArray = getSyntax()
+        let arr: NSArray = getSyntax()
         programSorceCode = QEDTextView(programView.frame, language: arr as [AnyObject])
         view.addSubview(programSorceCode)
         configureView()
         programSorceCode.delegate = self
         self.createInputAccessoryView()
         programSorceCode.inputAccessoryView = inputAccessory
+        programSorceCode.scrollEnabled = true
     }
     
     func getSyntax() -> NSArray {
-        var textViewOptions = NSMutableArray()
+        let textViewOptions = NSMutableArray()
         if let path = NSBundle.mainBundle().pathForResource("syntax", ofType: "plist") {
-            var syntaxFile = NSDictionary(contentsOfFile: path)
+            let syntaxFile = NSDictionary(contentsOfFile: path)
             if let dictionary = syntaxFile {
                 let regex = dictionary.valueForKey("RegEx") as! NSDictionary
                 let colors = dictionary.valueForKey("Colors") as! NSDictionary
@@ -139,7 +140,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         //Array of buttons that will go in the row
         var buttons = [UIButton]()
         //Setting up the size of the array of keys
-        var keyboardRowView = UIView(frame: CGRectMake(0, 0, 320, 50))
+        let keyboardRowView = UIView(frame: CGRectMake(0, 0, 320, 50))
         keyboardRowView.backgroundColor = UIColor(red:0.82, green:0.835, blue:0.859, alpha:1)
         //Create each button in the row
         for buttonTitle in buttonTitles{
@@ -155,13 +156,13 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     //Creating a button with the title from the button* arrays
     func createButtonWithTitle(title: String) -> UIButton {
         
-        let button = UIButton.buttonWithType(.System) as! UIButton
+        let button = UIButton(type: .System)
         button.frame = CGRectMake(0, 0, 20, 20)
         button.clipsToBounds = true
         button.setTitle(title, forState: .Normal)
         button.sizeToFit()
         button.titleLabel?.font = UIFont.systemFontOfSize(15)
-        button.setTranslatesAutoresizingMaskIntoConstraints(false)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.whiteColor()
         button.layer.cornerRadius = 5
         button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
@@ -172,9 +173,9 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     }
     
     func addIndividualButtonConstraints(buttons: [UIButton], mainView: UIView){
-        for (index, button) in enumerate(buttons) {
-            var topConstraint = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: mainView, attribute: .Top, multiplier: 1.0, constant: 5)
-            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: mainView, attribute: .Bottom, multiplier: 1.0, constant: -3)
+        for (index, button) in buttons.enumerate() {
+            let topConstraint = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: mainView, attribute: .Top, multiplier: 1.0, constant: 5)
+            let bottomConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: mainView, attribute: .Bottom, multiplier: 1.0, constant: -3)
             var rightConstraint : NSLayoutConstraint!
             if index == buttons.count - 1 {
                 rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: mainView, attribute: .Right, multiplier: 1.0, constant: -3)
@@ -189,7 +190,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
                 let prevtButton = buttons[index-1]
                 leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: prevtButton, attribute: .Right, multiplier: 1.0, constant: 5)
                 let firstButton = buttons[0]
-                var widthConstraint = NSLayoutConstraint(item: firstButton, attribute: .Width, relatedBy: .Equal, toItem: button, attribute: .Width, multiplier: 1.0, constant: 0)
+                let widthConstraint = NSLayoutConstraint(item: firstButton, attribute: .Width, relatedBy: .Equal, toItem: button, attribute: .Width, multiplier: 1.0, constant: 0)
                 widthConstraint.priority = 800
                 mainView.addConstraint(widthConstraint)
             }
@@ -230,7 +231,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     
     func modal() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        self.compileModal = (sb.instantiateViewControllerWithIdentifier("CompileModal")! as! CompileModal)
+        self.compileModal = (sb.instantiateViewControllerWithIdentifier("CompileModal") as! CompileModal)
         self.compileModal!.delegate = self
         
         self.compileModal!.modalTransitionStyle = .CoverVertical
@@ -248,7 +249,10 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         let object = self.fetchedResultsController.objectAtIndexPath(self.index)
             as! NSManagedObject
         object.setValue(self.programSorceCode.text, forKey: "code")
-        self.managedObjectContext?.save(nil)
+        do {
+            try self.managedObjectContext?.save()
+        } catch _ {
+        }
     }
     
     // MARK: - Fetched results controller
@@ -268,7 +272,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         
         // Edit the sort key as appropriate.
         let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
-        let sortDescriptors = [sortDescriptor]
+        _ = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -279,7 +283,10 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         _fetchedResultsController = aFetchedResultsController
         
         var error: NSError? = nil
-        if !_fetchedResultsController!.performFetch(&error) {
+        do {
+            try _fetchedResultsController!.performFetch()
+        } catch let error1 as NSError {
+            error = error1
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             //println("Unresolved error \(error), \(error.userInfo)")
