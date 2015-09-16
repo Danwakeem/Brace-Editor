@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
     let notificationKey = "com.Danwakeem.compile-output"
     
     var programSorceCode: CYRTextView!
+    //@IBOutlet var programSorceCode: QEDTextView!
     @IBOutlet weak var programView: UIView!
     
     var inputAccessory: UIView!
@@ -75,6 +76,9 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
             compileButton.enabled = false
             self.view.backgroundColor = UIColor.grayColor()
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasHidden:", name: UIKeyboardDidHideNotification, object: nil)
     }
     
     func setUpTextView() {
@@ -86,6 +90,7 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         self.createInputAccessoryView()
         programSorceCode.inputAccessoryView = inputAccessory
         programSorceCode.scrollEnabled = true
+        programSorceCode.autoresizesSubviews = true
     }
     
     func getSyntax() -> NSArray {
@@ -113,10 +118,24 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         return NSArray(array: textViewOptions)
     }
     
+    func keyboardWasShown(notification: NSNotification) {
+        let userData = notification.userInfo as NSDictionary?
+        let keyboardSize = userData?.objectForKey(UIKeyboardFrameEndUserInfoKey)?.CGRectValue.size
+        programSorceCode.contentInset = UIEdgeInsetsMake(0, 0, (keyboardSize?.height)!, 0)
+        programSorceCode.scrollIndicatorInsets = programSorceCode.contentInset
+        programSorceCode.scrollRangeToVisible(programSorceCode.selectedRange)
+    }
+    
+    func keyboardWasHidden(notification: NSNotification){
+        programSorceCode.contentInset = UIEdgeInsetsZero
+        programSorceCode.scrollIndicatorInsets = UIEdgeInsetsZero
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if detailItem != nil {
             programSorceCode.frame = programView.frame
+            programSorceCode.contentSize = CGSize(width: programSorceCode.frame.width, height: programSorceCode.frame.height)
         }
     }
     
@@ -252,7 +271,16 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         do {
             try self.managedObjectContext?.save()
         } catch _ {
+            print("Caught exception")
         }
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        textView.scrollRangeToVisible(textView.selectedRange)
+    }
+    
+    func textViewDidChangeSelection(textView: UITextView) {
+        programSorceCode.scrollRangeToVisible(programSorceCode.selectedRange)
     }
     
     // MARK: - Fetched results controller
@@ -282,11 +310,10 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
-        var error: NSError? = nil
         do {
             try _fetchedResultsController!.performFetch()
         } catch let error1 as NSError {
-            error = error1
+            print(error1)
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             //println("Unresolved error \(error), \(error.userInfo)")

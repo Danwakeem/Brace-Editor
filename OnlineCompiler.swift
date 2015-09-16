@@ -44,7 +44,7 @@ class OnlineCompiler {
         request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         print(body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true))
         
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?,  response: NSURLResponse?, error: NSError?) -> Void in
             if data != nil {
                 if let doc: HTMLDocument = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding){
                     let result = doc.xpath("/html/body/div/table/tr/td/div[2]/table/tr/td[2]/div")
